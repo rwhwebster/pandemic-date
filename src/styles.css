@@ -1,3 +1,12 @@
+@keyframes slideInFromBottom {
+    0% {
+        transform: translate(-50%, 150%);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
 body{
     margin: auto;
     text-align: center;
@@ -5,6 +14,7 @@ body{
     background-repeat: no-repeat;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
+    overflow-y: hidden;
 }
 
 html {height: 100%;}
@@ -14,8 +24,9 @@ section {
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-right: -50%;
     transform: translate(-50%, -50%);
+    margin-right: -50%;
+    animation: 1s ease-out 0s 1 slideInFromBottom;
 }
 
 h1 {
@@ -24,7 +35,7 @@ h1 {
 
 .days {
     font-size: 5vh;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 p {
