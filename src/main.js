@@ -1,4 +1,3 @@
-
 const marchFirst = '2020-03-01';
 
 function daysElapsed(startDate){
