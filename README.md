@@ -1,1 +1,1 @@
-<rwhwebster.github.io/pandemic-date/>
+<http://rwhwebster.github.io/pandemic-date/>
