@@ -7,6 +7,8 @@
     }
 }
 
+body, html {height: 100%;}
+
 body{
     margin: auto;
     text-align: center;
@@ -17,8 +19,6 @@ body{
     font-weight: 500;
     overflow-y: hidden;
 }
-
-html {height: 100%;}
 
 section {
     padding: 1em;
@@ -46,5 +46,5 @@ p {
 }
 
 .divider {
-    height: 10vh;
+    height: 8vh;
 }
