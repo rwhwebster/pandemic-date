@@ -14,18 +14,19 @@ function initDate(id, startDate) {
     const dateField = document.getElementById(id);
     const dateSpan = dateField.querySelector('.days');
     const d = daysElapsed(startDate);
-    var ending;
-    switch (d.days % 10) {
-        case 1:
-            ending = "st";
-        case 2:
-            ending = "nd";
-        case 3:
-            ending = "rd";
-        default:
-            ending = "th";
+    var suffix;
+    var ten = d.days % 10;
+    var hund = d.days % 100;
+    if (ten==1 && hund!=11) {
+        suffix = "st";
+    } else if (ten==2 && hund!=12) {
+        suffix = "nd";
+    } else if (ten==3 && hund!=13) {
+        suffix = "rd";
+    } else {
+        suffix = "th";
     }
-    dateSpan.innerHTML = `It's March ${d.days}<sup>${ending}</sup> 2020<br>`;
+    dateSpan.innerHTML = `It's March ${d.days}<sup>${suffix}</sup> 2020<br>`;
   };
 
 window.onload = function() {
